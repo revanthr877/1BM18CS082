@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<conio.h>
+int main ()
+{
+struct stud
+{
+char name[25];
+char usn[15];
+int marks[3];
+}s1;
+int total=0,i;
+clrscr();
+printf("Enter students name:");
+gets(s1.name);
+printf("Enter student usn:");
+gets(s1.usn);
+for(i=1; i<4; i++)
+{
+printf("Enter subject %d marks:",i);
+scanf("%d",&s1.marks[i-1]);
+total+=s1.marks[i-1];
+}
+printf("\n Name:%s",s1.name);
+printf("\n usn:%s",s1.usn);
+for(i=0,i<3;i++;)
+printf("\n subject %d marks: %d",i+1,s1.marks[i]);
+printf("\n total=%d",total);
+getch();
+return 0;
+}
