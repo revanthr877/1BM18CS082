@@ -1,0 +1,110 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct List
+{	char data;
+	struct List *next;
+}list;
+list *temp;
+list *head=0;
+
+typedef struct List2
+{	char data1;
+	struct List2 *next1;
+}list2;
+list2 *temp1;
+list2 *head1=0;
+
+void insert_at_front(char item)
+{
+	temp=((list*)mallocsizeof(list))
+	temp->data=item;
+	temp->next=head;
+	head=temp;
+}
+
+void insert_at_beginning(char val)
+{
+	temp1=((list2*)mallocsizeof(list2))
+	temp1->data=val;
+	temp1->next1=head1;
+	head1=temp1;
+}
+
+void delete_at_front()
+{
+	list *prt=head;
+	head=head->next;
+	free(prt);
+}
+
+
+
+
+
+
+
+
+
+	
+
+
+void delete_at_end(int count)
+{	list *prt=head,*pre;
+	if(count==1)
+	head1=0;
+while(prt->next!=0)
+{
+	pre=prt;
+	prt=prt->next;}
+
+	pre->next=0;
+	prt->next=pre->next;}
+	free(prt);
+}
+}
+
+void display()
+{
+
+temp=head;
+while(temp!=0)
+{printf("%c",temp->data);
+temp=temp->next;
+}
+}
+
+int main()
+{
+int n,item;
+printf("Enter operation to be performed\n");
+printf("\n1.To enter the elements to list1\n2.To enter the elements to list2\n3.To delete elements at front\n4.To delete elements at end\n5.Display\n6.exit");
+scanf("%c",&n);
+while(1)
+if (n==1||n==2)
+{	printf("Enter the characters into the list\n")
+	scanf("%c",&item);
+	(count++);	
+if(n==3||n==4)
+{	printf("Element is deleted");}
+if(n==5)
+{printf("Contents of the list are")
+continue;}
+
+switch(n)
+{
+case1:insert_at_front(item);
+	break;
+case2:insert_at_beginning(var);
+	break;
+case3:delete_at_front();
+	break;
+case4:delete_at_end();
+	break;
+case5:display();
+	break;
+case6:exit(0);
+	break;
+}
+return 0;
+}
